@@ -100,6 +100,44 @@ TAGVALUE=ExampleProject
 
 Ensure the configuration file's path is correctly specified when running the script with the `-f` option, as incorrect paths will prevent the script from executing as intended.
 
+## Managing Instances with `manage_instances.bat`
+
+The `manage_instances.bat` script provides a convenient way to start or stop multiple AWS EC2 instances across different profiles by automatically detecting and utilizing configuration files. This script simplifies the process of managing instances for users with multiple configurations.
+
+### Features
+
+- **Automatic Configuration Detection:** Automatically finds and uses all `.config` files in the specified directory.
+- **Flexible Instance Management:** Allows starting or stopping instances across multiple profiles with a single command.
+
+### Prerequisites
+
+- Ensure you have followed the setup instructions in the [Configuration File Setup](#configuration-file-setup) section.
+- Place all your `.config` files in the `configs` directory. The script is designed to automatically detect these files.
+
+### Usage
+
+To use `manage_instances.bat`, simply provide a single command line argument (`start` or `stop`) to specify the desired action. The script will apply this action to all instances defined in the `.config` files located in the `configs` directory.
+
+#### Starting Instances
+
+```cmd
+manage_instances.bat start
+```
+
+This command will start all EC2 instances defined in the configuration files within the `configs` directory.
+
+#### Stopping Instances
+
+```cmd
+manage_instances.bat stop
+```
+
+This command will stop all EC2 instances defined in the configuration files within the `configs` directory.
+
+### Configuration Directory
+
+By default, the script expects a directory named `configs` at the same level as the `manage_instances.bat` script. Ensure this directory contains your `.config` files, each configured as described in the [Configuration File Setup](#configuration-file-setup) section.
+
 ## Contributing
 
 Contributions are welcome. Please open an issue first to discuss what you would like to change or add.
