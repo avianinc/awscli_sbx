@@ -1,8 +1,8 @@
 # Ignore specific batch script extensions
-*.bat
+#*.bat
 
 # Ignore configuration files
-*.config
+#*.config
 
 # Ignore system files often found in Windows environments
 Thumbs.db
