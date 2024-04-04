@@ -1,0 +1,30 @@
+# Ignore specific batch script extensions
+*.bat
+
+# Ignore configuration files
+*.config
+
+# Ignore system files often found in Windows environments
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Windows image file caches
+Icon?
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+*.swp
+
+# Windows shortcuts
+*.lnk
+
+# Exclude user-specific Visual Studio Code settings
+.vscode/
